@@ -4,7 +4,6 @@ import pprint
 from language import *
 
 main_dict = Dictionary()
-main_dict.build()
 main_dict.print()
 
 input_text = 'eel'

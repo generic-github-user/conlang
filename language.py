@@ -7,6 +7,7 @@ class Dictionary:
         self.load_dict(dictionary)
         self.printer = pprint.PrettyPrinter(indent=4)
         # print(self.dictionary)
+        self.build()
 
     def load_dict(self, dictionary):
         with open(dictionary, 'r') as dictionary_file:
