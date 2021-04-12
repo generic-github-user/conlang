@@ -37,3 +37,11 @@ The alphabet includes the same letters as the 26-character English alphabet, alt
 This particular conlang is designed to be completely semantically unambiguous when possible, mainly to facilitate computer parsing and generation of statements. Therefore, only one meaning can be extracted from a statement and it can be processed with no loss of precision. This is achieved by specifically designating modifiers to subjects and objects so that no subjectivity is involved in interpretation.
 
 # Syntax
+
+# Examples
+
+## English
+
+Some examples of simple statements (original meanings in English)
+
+ - `I will become a very powerful king.` **&#8594;** ``Zev jet'ulad wesane`x'ret'ama.``
