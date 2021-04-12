@@ -22,9 +22,9 @@ for term in dictionary:
     if term['translation'] == 'AUTO':
         lit = term['literal']
         components = lit.split(' ')
-        translation = []
+        translation = [translate_word(components.pop())]
         for c in components:
-            translation.append(list(filter(lambda x: x['english'] == c, dictionary))[0]['translation'])
+            translation.append(translate_word(c))
         term['translation'] = ''.join(translation)
 
 pp = pprint.PrettyPrinter(indent=4)
