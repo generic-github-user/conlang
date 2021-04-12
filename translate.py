@@ -1,7 +1,6 @@
 import json
 import pprint
 
-input_text = 'eel'
 
 with open('dictionary.json', 'r') as dictionary_file:
     dictionary = json.loads(dictionary_file.read())
@@ -29,3 +28,6 @@ for term in dictionary:
 
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(dictionary)
+
+input_text = 'eel'
+print(translate(input_text))
