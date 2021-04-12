@@ -13,6 +13,11 @@ class Dictionary:
             self.dictionary = json.loads(dictionary_file.read())
         return True
 
+    def save_dict(self):
+        with open('dictionary.json', 'w') as savefile:
+            json.dump(self.dictionary, savefile)
+        return True
+
     def find_words(self, word):
         return list(filter(lambda x: x['english'] == word, self.dictionary))
 
