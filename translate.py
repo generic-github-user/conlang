@@ -23,19 +23,30 @@ def translate(text):
         output += translate_word(word)
     return output
 
+def compile_word(term):
+    lit = term['literal']
+    components = lit.split(' ')
+    # Start the translation with just the translation of the last word in the literal definition phrase (e.g., water + snake should start with snake, which is then modified)
+    # translation = [translate_word(components.pop())]
+    translation = []
+
+    # Loop through component words and translate each
+    for c in components:
+        t = translate_word(c)
+        if t == '[AUTO]':
+            t = compile_word(next(find_words(c)))
+
+        translation.append(t)
+    # translation = translation[:-1]
+    # change word order?
+    return "'".join(translation)
+
 # Build dictionary
 for term in dictionary:
     # Generate compound terms from translations of parts (e.g., eel --> water + snake)
-    if term['translation'] == 'AUTO':
-        lit = term['literal']
-        components = lit.split(' ')
-        # Start the translation with just the translation of the last word in the literal definition phrase (e.g., water + snake should start with snake, which is then modified)
-        translation = [translate_word(components.pop())]
-        # Loop through component words and translate each
-        for c in components:
-            translation.append(translate_word(c))
+    if term['translation'] == '[AUTO]':
         # Combine translated terms and save
-        term['translation'] = ''.join(translation)
+        term['translation'] = compile_word(term)
 
 pp = pprint.PrettyPrinter(indent=4)
 pp.pprint(dictionary)
