@@ -45,3 +45,27 @@ This particular conlang is designed to be completely semantically unambiguous wh
 Some examples of simple statements (original meanings in English)
 
  - `I will become a very powerful king.` **&#8594;** ``Zev jet'ulad wesane`x'ret'ama.``
+
+## Parsing
+
+Examples for how meaning can be algorithmically extracted from statements.
+
+*Note: this section covers automated parsing of text-based statements; parsing is not necessary for a natural tree as it represents the semantic meaning of the statement.*
+
+``Zev jet'ulad wesane`x'ret'ama.``
+
+1. Identify sentence bounds from capitalization and punctuation (very similar to other languages)
+2. Locate subject, verb, and object; `Zev`; `jet'ulad`; ``wesane`x'ret'ama``
+3. Parse each of the above into roots and modifiers
+      - `zev`
+      - `je`; `ulad`
+      - `wesane`; `ret`; `ama`
+4. Group modifiers
+      - `ret` + `ama`
+5. Generate parse tree
+  - Subject: `zev`
+  - Verb: `ulad`
+    - Tense: `je`
+  - Object: `wesane`
+    - Modifier: `ret`
+      - Modifier: `ama`
