@@ -7,6 +7,19 @@ This repository stores data and scripts associated with my (as of yet unnamed) p
 
 Anyone is free to use these tools if they find them helpful, although it should be noted that minimal attention was paid to making them universally helpful/easy to learn.
 
+# Features
+
+The following is a non-exhaustive list of guiding principles and features the language is intended to have.
+
+ - Efficiency
+ - Standardization
+ - Flexibility
+ - Coverage
+ - Modularity
+ - Integration
+ - Simplicity
+ - Longevity
+
 # Formats
 
 The language can be written in two main forms; graphically and typed. The latter is a Romanized version that can be written using universal ASCII/Unicode characters; it is useful for interacting with NLP systems, communicating via text, etc.
