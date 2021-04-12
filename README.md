@@ -18,3 +18,9 @@ This is usually the most efficient way to write in the language by hand, and is 
 ## Typed
 
 The alphabet includes the same letters as the 26-character English alphabet, although the pronunciations of many letters and syllables deviate from their English counterparts.   
+
+# Ambiguity
+
+This particular conlang is designed to be completely semantically unambiguous when possible, mainly to facilitate computer parsing and generation of statements. Therefore, only one meaning can be extracted from a statement and it can be processed with no loss of precision. This is achieved by specifically designating modifiers to subjects and objects so that no subjectivity is involved in interpretation.
+
+# Syntax
