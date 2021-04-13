@@ -2,7 +2,9 @@ import json
 import pprint
 
 class Dictionary:
-    def __init__(self, dictionary='dictionary.json'):
+    """Stores words with associated translations and metadata and provides methods for updating/adding to the list"""
+    def __init__(self, dictionary:String='dictionary.json'):
+        """Create a new dictionary object and load data from local file"""
         # self.dictionary = self.load_dict(dictionary)
         self.load_dict(dictionary)
         self.printer = pprint.PrettyPrinter(indent=4)
@@ -10,6 +12,8 @@ class Dictionary:
         self.build()
 
     def add_term(self, english, type, translation='[AUTO]'):
+        """Add a term to the dictionary"""
+
         word = {
             'english': english,
             'translation': translation,
@@ -18,19 +22,23 @@ class Dictionary:
         self.dictionary.append(word)
 
     def load_dict(self, dictionary):
+        """Load dictionary from local file"""
         with open(dictionary, 'r') as dictionary_file:
             self.dictionary = json.loads(dictionary_file.read())
         return True
 
     def save_dict(self):
+        """Save the dictionary to a JSON dump"""
         with open('dictionary.json', 'w') as savefile:
             json.dump(self.dictionary, savefile)
         return True
 
     def find_words(self, word):
+        """Get word objects matching criteria"""
         return list(filter(lambda x: x['english'] == word, self.dictionary))
 
     def translate_word(self, word):
+        """Find translation for word in dictionary"""
         # translation = next(self.find_words(word))['translation']
         # print(next(self.find_words(word)))
         translation = self.find_words(word)[0]['translation']
@@ -40,6 +48,7 @@ class Dictionary:
         return translation
 
     def translate(self, text):
+        """Translate a phrase using the dictionary"""
         input_words = text.split(' ')
         output = ''
         # Loop through words in input phrase
@@ -48,6 +57,7 @@ class Dictionary:
         return output
 
     def compile_word(self, term):
+        """Assemble a compound word from its parts"""
         lit = term['literal']
         components = lit.split(' ')
         # Start the translation with just the translation of the last word in the literal definition phrase (e.g., water + snake should start with snake, which is then modified)
@@ -69,6 +79,8 @@ class Dictionary:
         return "'".join(translation)
 
     def build(self):
+        """Fill in any data in the dictionary that needs to be created dynamically"""
+
         # Build dictionary
         for term in self.dictionary:
             # Generate compound terms from translations of parts (e.g., eel --> water + snake)
@@ -78,4 +90,5 @@ class Dictionary:
         return True
 
     def print(self):
+        """Print the dictionary to the console"""
         self.printer.pprint(self.dictionary)
