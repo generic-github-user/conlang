@@ -9,6 +9,14 @@ class Dictionary:
         # print(self.dictionary)
         self.build()
 
+    def add_term(self, english, type, translation='[AUTO]'):
+        word = {
+            'english': english,
+            'translation': translation,
+            'type': type
+        }
+        self.dictionary.append(word)
+
     def load_dict(self, dictionary):
         with open(dictionary, 'r') as dictionary_file:
             self.dictionary = json.loads(dictionary_file.read())
