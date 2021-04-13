@@ -40,14 +40,14 @@ Anyone is free to use these tools if they find them helpful, although it should 
 
 The following is a non-exhaustive list of guiding principles and features the language is intended to have.
 
- - Efficiency
- - Standardization
- - Flexibility
- - Coverage
- - Modularity
- - Integration
- - Simplicity
- - Longevity
+ - **Efficiency**
+ - **Standardization**
+ - **Flexibility**
+ - **Coverage**
+ - **Modularity**
+ - **Integration**
+ - **Simplicity**
+ - **Longevity**
 
 # Formats
 
