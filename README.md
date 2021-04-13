@@ -27,7 +27,7 @@
 
 # Introduction
 
-This repository stores data and scripts associated with my (as of yet unnamed) personal conlang (short for [constructed language](https://en.wikipedia.org/wiki/Constructed_language)). This project serves a few purposes;
+S'von! This repository stores data and scripts associated with my (as of yet unnamed) personal conlang (short for [constructed language](https://en.wikipedia.org/wiki/Constructed_language)). This project serves a few purposes;
 
  - Speeding up both digital and traditional note-taking
    - Hypothesis that translating notes while writing them could also aid comprehension and retention
