@@ -1,7 +1,36 @@
 # conlang
 
+<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [conlang](#conlang)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Formats](#formats)
+	- [Graphical](#graphical)
+	- [Typed](#typed)
+- [Ambiguity](#ambiguity)
+- [Syntax](#syntax)
+- [Examples](#examples)
+	- [English](#english)
+	- [Parsing](#parsing)
+- [Translation](#translation)
+	- [To Other Languages](#to-other-languages)
+	- [From Other Languages](#from-other-languages)
+- [Speech](#speech)
+	- [Pronunciation](#pronunciation)
+	- [Text to Speech](#text-to-speech)
+	- [Speech to Text](#speech-to-text)
+- [Variations](#variations)
+	- [Artistic](#artistic)
+
+<!-- /TOC -->
+
+# Introduction
+
 This repository stores data and scripts associated with my (as of yet unnamed) personal conlang (short for [constructed language](https://en.wikipedia.org/wiki/Constructed_language)). This project serves a few purposes;
+
  - Speeding up both digital and traditional note-taking
+   - Hypothesis that translating notes while writing them could also aid comprehension and retention
  - Better understanding language systems and dynamics as I dive deeper into Natural Language Processing (NLP)
  - Providing an efficient and precise interface for personal NLP-based systems (primarily a digital assistant I have been working on)
 
