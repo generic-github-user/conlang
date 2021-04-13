@@ -69,3 +69,23 @@ Examples for how meaning can be algorithmically extracted from statements.
   - Object: `wesane`
     - Modifier: `ret`
       - Modifier: `ama`
+
+# Translation
+
+## To Other Languages
+
+## From Other Languages
+
+# Speech
+
+## Pronunciation
+
+## Text to Speech
+
+## Speech to Text
+
+# Variations
+
+## Artistic
+
+A branch of this language is planned to accommodate more nuanced and aesthetically-pleasing words and phrases. The syntax will remain mostly the same.
